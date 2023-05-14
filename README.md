@@ -1,4 +1,7 @@
 # chat_app
+![image](https://github.com/NabihUzcategui/flutter_chat_app/assets/99839506/c6df7295-6962-4ad7-86c7-a2ffc0c48b74) . ![image](https://github.com/NabihUzcategui/flutter_chat_app/assets/99839506/5f582299-6dda-4a4b-9837-ccb6ac77ae83)
+
+
 
 A new Flutter project.
 
