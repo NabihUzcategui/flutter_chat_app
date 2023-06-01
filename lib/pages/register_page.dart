@@ -19,30 +19,29 @@ class RegisterPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Logo(titulo: 'Register',),
-                      
+                  const Logo(
+                    titulo: 'Register',
+                  ),
                   _Form(),
-                      
                   const Labels(
-                    ruta: 'login', 
-                    titulo: '¿Ya tienes una cuenta?', 
+                    ruta: 'login',
+                    titulo: '¿Ya tienes una cuenta?',
                     subTitulo: 'Ingresa ahora!',
                   ),
-                      
                   const Padding(
                     padding: EdgeInsets.only(bottom: 5),
-                    child: Text('Terminos y condiciones de uso', style: TextStyle( fontWeight: FontWeight.w200),),
+                    child: Text(
+                      'Terminos y condiciones de uso',
+                      style: TextStyle(fontWeight: FontWeight.w200),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
-
-
 
 class _Form extends StatefulWidget {
   @override
@@ -50,58 +49,47 @@ class _Form extends StatefulWidget {
 }
 
 class __FormState extends State<_Form> {
-
   final emailCtrl = TextEditingController();
-  final passCtrl  = TextEditingController();
-  final nameCtrl  = TextEditingController();
+  final passCtrl = TextEditingController();
+  final nameCtrl = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         children: [
-
           CustomInput(
             icon: Icons.person_2_outlined,
-            placeHolder: 'Nombre', 
+            placeHolder: 'Nombre',
             keyboardType: TextInputType.text,
             textController: nameCtrl,
-          
           ),
 
           CustomInput(
             icon: Icons.mail_outline,
-            placeHolder: 'Correo', 
+            placeHolder: 'Correo',
             keyboardType: TextInputType.emailAddress,
             textController: emailCtrl,
-          
           ),
 
           CustomInput(
             icon: Icons.lock_outline,
-            placeHolder: 'Contraseña', 
+            placeHolder: 'Contraseña',
             textController: passCtrl,
-            inPassword: true,          
+            inPassword: true,
           ),
 
           //todo: crear el botónhola
           BtnAzul(
-            texto: 'Ingrese', 
+            texto: 'Ingrese',
             onPressed: () {
               print(emailCtrl.text);
               print(passCtrl.text);
             },
           ),
-
         ],
       ),
     );
   }
 }
-
-
-
-
-
